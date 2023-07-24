@@ -51,7 +51,7 @@ const parse = (chatCompletion, images) => {
         originalContent: content,
         parsedContent: {
             title: parsed.title.join('\n'),
-            introducion: parsed.introducion.join('\n'),
+            introduction: parsed.introducion.join('\n'),
             body: parsed.body.join('\n'),
             conclusion: parsed.conclusion.join('\n')
         },

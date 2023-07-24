@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "autoblog-index": "node ./autoblog/autoblog-index.js",
     "db-index": "node ./db/db-index.js",
     "openai-test": "node ./openai/test.js"
   },
