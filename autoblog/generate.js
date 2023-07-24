@@ -7,7 +7,7 @@ const generate = text => {
 
     return Promise.all([
         createChatCompletion(prompt, {max_tokens: 3072}),
-        createImage(text, {size: '256x256', n: 2 })
+        createImage(text, {size: '1024x1024', n: 2 })
     ]).then(datas => {
         const chatCompletion = datas[0];
         const images = datas[1];
