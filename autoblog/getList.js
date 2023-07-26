@@ -1,10 +1,8 @@
 const selectPosts = require('../db/selectPosts');
 
 const getList = () => {
-    Promise.all([
-        selectPosts()
-    ]).then(datas => {
-        console.log(datas)
+    return new Promise((res, rej) => {
+        selectPosts().then(res).catch(rej);
     });
 };
 
