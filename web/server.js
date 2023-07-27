@@ -36,6 +36,7 @@ app.get('/', async (req, res) => {
     indexHtml = indexHtml.replace('{{introduction}}', selectedPost.introduction);
     indexHtml = indexHtml.replace('{{body}}', selectedPost.body.split('\n').map(p => `<p>${p}</p>`).join(''));
     indexHtml = indexHtml.replace('{{conclusion}}', selectedPost.conclusion);
+    indexHtml = indexHtml.replace('{{info}}', `${selectedPost.author} @ ${selectedPost.datetime}`);
     indexHtml = indexHtml.replace('{{img1}}', `/img?img=img${selectedPost.id}_1.png`);
     indexHtml = indexHtml.replace('{{img2}}', `/img?img=img${selectedPost.id}_2.png`);
 
